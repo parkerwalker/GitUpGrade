@@ -1,0 +1,29 @@
+body{
+  margin: 50px;
+}
+
+#inputForm{
+  margin-left: 30px;
+}
+
+ .input {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.gif:hover{
+  
+}
+
+.searchGifs{
+  display: inline-block;
+  padding: 5px;
+  margin:auto;
+  text-align: center;
+}
+
+.row {
+  padding: 20px;
+}

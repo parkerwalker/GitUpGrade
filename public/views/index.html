@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+    <script src="scripts/services/random.service.js" charset="utf-8"></script>
+    <script src="scripts/services/search.service.js" charset="utf-8"></script>
+    <meta charset="utf-8">
+    <title>Giphy Upgrade</title>
+    <link rel="bootstrap" href="vendors/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/master.css">
+  </head>
+    <body ng-app='app'>
+      <div class="container">
+        <h1>Giphy Search</h1>
+        <div ng-controller='GiphyController as gp' class="col-md-8 col-lg-2 form">
+          <div id="inputForm">
+            <form ng-submit='gp.searchClick()' class="form" >
+              <input ng-model='gp.search' class='input' type="text" name="" value="" placeholder='Search a Gif'>
+              <button ng-click='gp.searchClick()' type="button" name="button">Search</button>
+            </form>
+            <button ng-click='gp.randomClick()' type="button" name="button">Random</button>
+          </div>
+
+          <div class="row">
+            <img ng-src="{{gp.returnRandom}}" class="gif" alt="">
+            <div ng-repeat='x in gp.returnSearch' class="col-md-4 searchGifs">
+              <img ng-src="{{x.images.fixed_height.url}}" alt="" class="gif">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </body>
+    </html>
